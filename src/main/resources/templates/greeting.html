@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Hello!'" />
+<form method="post">
+<p th:text="'Task1:'" />
+<p th:text="'5 + 5 ='" />
+    <input type="number" name=ans1 placeholder="Answer:"/>
+
+<p th:text="'Task2:'" />
+<p th:text="'4 + 7 ='" />
+    <input type="number" name=ans2 placeholder="Answer:"/>
+
+<p th:text="'Task3:'" />
+<p th:text="'2 + 6 ='" />
+    <input type="number" name=ans3 placeholder="Answer:"/>
+
+    <button type="submit">Send</button>
+</form>
+
+<p th:text="${result}" />
+</body>
+</html>

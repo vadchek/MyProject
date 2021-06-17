@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Result list:'" />
+</div>
+<table class="tg">
+    <thead>
+    <tr>
+        <th class="tg">ID</th>
+        <th class="tg">Result</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row : ${uRes}">
+        <td class="tg bg" th:text="${row.id}"></td>
+        <td class="tg bg" th:text="${row.result}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<a href="/">Return to test page</a>
+
+</body>
+</html>

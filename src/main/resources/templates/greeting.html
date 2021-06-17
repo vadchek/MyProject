@@ -5,10 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
 <p th:text="'Hello!'" />
-<form method="post">
+<form th:action="@{/}" method="post">
 <p th:text="'Task1:'" />
-<p th:text="'5 + 5 ='" />
+<p th:text="'5 - 5 ='" />
     <input type="number" name=ans1 placeholder="Answer:"/>
 
 <p th:text="'Task2:'" />
@@ -19,9 +24,12 @@
 <p th:text="'2 + 6 ='" />
     <input type="number" name=ans3 placeholder="Answer:"/>
 
-    <button type="submit">Send</button>
+    <div><input type="submit" value="Send"/></div>
 </form>
 
-<p th:text="${result}" />
+<p th:text="${res}" />
+
+<a href="/list">See list of result</a>
+
 </body>
 </html>

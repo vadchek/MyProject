@@ -1,7 +1,11 @@
 package org.vadim.repos;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.vadim.domain.UserResults;
 
-public interface UserResultsRepo extends CrudRepository<UserResults, Integer>{
+import java.util.List;
+
+public interface UserResultsRepo extends JpaRepository<UserResults, Long>{
+
+    List<UserResults> findByAuthorName(String authorName);
 }

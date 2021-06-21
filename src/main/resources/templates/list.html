@@ -10,14 +10,16 @@
 <table class="tg">
     <thead>
     <tr>
-        <th class="tg">ID</th>
         <th class="tg">Result</th>
+        <th class="tg">Date</th>
+        <th class="tg">Author</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="row : ${uRes}">
-        <td class="tg bg" th:text="${row.id}"></td>
         <td class="tg bg" th:text="${row.result}"></td>
+        <td class="tg bg" th:text="${row.date}"></td>
+        <td class="tg bg" th:text="${row.authorName}"></td>
     </tr>
     </tbody>
 </table>

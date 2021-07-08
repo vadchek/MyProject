@@ -31,12 +31,6 @@ public class GreetingController {
         return "greeting";
     }
 
-    @GetMapping("/list")
-    public String list(Model model){
-        Iterable<UserResults> results = userResultsRepo.findAll();
-        model.addAttribute("uRes", results);
-        return "list";
-    }
 
     @PostMapping("/")
     public String retResult(@AuthenticationPrincipal User user,
@@ -62,7 +56,7 @@ public class GreetingController {
         return "greeting";
     }
 
-    @PostMapping("/list")
+    @GetMapping("/list")
     public String resList(Principal user, Model model){
         Iterable<UserResults> results = userResultsRepo.findByAuthorName(user.getName());
         model.addAttribute("uRes", results);
